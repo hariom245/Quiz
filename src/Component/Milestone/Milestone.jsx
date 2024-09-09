@@ -1,33 +1,34 @@
-import React from 'react'
-import {useNavigate} from 'react-router-dom'
-import Quiz from '../Quiz/Quiz'
-import  './Milestone.css'
-import { data } from '../../asset/data'
-function Milestone({unlockedMilestone}) {
-    const navigate=useNavigate();
-    
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Milestone.css';
+import { data } from '../../asset/data';
 
-    const handleMilestone=(milestone)=>{
-        if(unlockedMilestone.includes(milestone))
-            navigate(`/quiz/${milestone}`)
-     }
+function Milestone({ unlockedMilestone }) {
+  const navigate = useNavigate();
 
-     
+  const handleMilestone = (milestone) => {
+    if (unlockedMilestone.includes(milestone)) {
+      navigate(`/quiz/${milestone}`);
+    }
+  };
+
   return (
     <div className='center'>
-    {
-        data.map((i)=>(
-        <div onClick={()=>handleMilestone(i.milestone)}  className='container'  style={{
-          cursor:unlockedMilestone.includes(i.milestone)?"pointer":"not-allowed",
-          opacity: unlockedMilestone.includes(i.milestone) ? 1 : 0.5,
-        }}>
+      {data.map((i) => (
+        <div key={i.milestone} className='container'>
           <h2>Milestone {i.milestone}</h2>
-          {unlockedMilestone.includes(i.milestone)?<p>Unlocked</p>: <p> Locked</p>}
-          </div>
-        ))
-      }
+          <p>{unlockedMilestone.includes(i.milestone) ? 'Unlocked' : 'Locked'}</p>
+          <button
+            onClick={() => handleMilestone(i.milestone)}
+            disabled={!unlockedMilestone.includes(i.milestone)}
+            className='milestone-btn'
+          >
+            {unlockedMilestone.includes(i.milestone) ? 'Start Quiz' : 'Locked'}
+          </button>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Milestone
+export default Milestone;

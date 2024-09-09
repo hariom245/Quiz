@@ -4,8 +4,9 @@ padding: 0;
 }
 body{
   /* height: 100vh; */
-  background-image: linear-gradient(#D8C7FF,#19006C);
+  /* background-image: linear-gradient(#ffffff,#07001e); */
   scrollbar-color: none;
+  background-color: aliceblue;
   scrollbar-width: none;
 }
 ::-webkit-scrollbar {
