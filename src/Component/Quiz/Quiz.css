@@ -1,0 +1,96 @@
+.center-2{
+    height: 100vh;
+}
+
+
+.container-2{
+    width:640px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: #262626;
+    padding: 40px 50px ;
+    border-radius: 10px;
+    background: white;
+    gap: 20px;
+}
+.container-2 hr{
+height: 2px;
+border: none;
+background: #707070;
+
+}
+.container-2 h2{
+    font-size: 27px;
+    font-weight: 500;
+}
+.container-2 ul li{
+    border: 1px solid #686868;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left:15px ;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container-2 button{
+    width: 250px;
+    height: 65px;
+    margin: auto;
+    color: #fff;
+    background: #553f9a;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+ .container-2 .correct{
+    background: #3ffec8;
+    border-color: #3ffec8;
+}
+.container-2 .wrong{
+    background: #fd8888;
+    border-color: #fd8888;
+}
+.notification{
+    background-color: #28a745; /* Green background for success */
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    position: fixed;   /* Fixed position for the notification */
+    top: 20px;         /* Distance from the top of the page */
+    right: 20px;       /* Notification on the right side */
+    z-index: 1000;     /* Ensure it's on top of other elements */
+    transition: transform 0.3s ease, opacity 0.3s ease;  /* Smooth animation */
+    opacity: 1;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+.notification.hide {
+    opacity: 0; /* Fade out effect */
+    transform: translateX(-100%);  /* Slide out to the left */
+  }
+.notification p{
+    margin: 0;
+}
+.timeline {
+    height: 4px;
+    background-color: #fff;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .timeline-progress {
+    background-color: #f39c12;  /* Progress bar color */
+    height: 100%;
+    width: 0%;  /* Start with 0 width */
+    transition: width linear;
+  }

@@ -1,0 +1,13 @@
+.container{
+    background: #523d88;
+    color: black;
+    width:640px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px ;
+    border-radius: 10px;
+    gap: 20px;
+   
+}

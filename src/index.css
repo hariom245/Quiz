@@ -1,0 +1,14 @@
+*{
+margin:0;
+padding: 0;
+}
+body{
+  /* height: 100vh; */
+  background-image: linear-gradient(#D8C7FF,#19006C);
+  scrollbar-color: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  overflow-y: scroll;
+  display: none;             /* Hide scrollbar in Chrome/Safari/WebKit */
+}
