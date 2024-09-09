@@ -1,13 +1,21 @@
 .container{
-    background: #523d88;
+    background: #f9f9f9;
     color: black;
+    border: solid 2px black;
+    box-shadow: 7px 7px 0px black;
     width:640px;
     margin: auto;
     margin-top: 50px;
     display: flex;
+    font-family:Arial, Helvetica, sans-serif;
     flex-direction: column;
     padding: 40px 50px ;
-    border-radius: 10px;
     gap: 20px;
-   
+}
+
+button{
+    display: block;
+    padding: 10px;
+    background-color: black;
+    color: #f9f9f9;
 }

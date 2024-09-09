@@ -3,6 +3,7 @@ import './App.css'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Quiz from "./Component/Quiz/Quiz"
 import Milestone from './Component/Milestone/Milestone'
+import Navbar from './Component/Navbar/navbar'
 
 function App() {
   const [unlockedMilestone, setunlockedMilestone] = useState([1])
@@ -11,6 +12,7 @@ function App() {
   };
   return (
     <Router>
+        <Navbar/>
       <Routes>
         <Route path="/" element={<Milestone unlockedMilestone={unlockedMilestone}/>} />
         <Route exact path="/quiz/:milestoneId" element={<Quiz unlockMilestone={unlockMilestone}/>}/>
